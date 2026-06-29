@@ -1,3 +1,4 @@
+import sys
 import requests
 
 
@@ -12,10 +13,14 @@ def request_api(url: str):
 
 # Gets the points of the given driver
 def get_specific_driver_points(number: int) -> int:
-    req = request_api(f"{PREFIX}championship_drivers?session_key=latest&&driver_number={number}")
-    return req[0].get("points_current")
+    try:
+        req = request_api(f"{PREFIX}championship_drivers?session_key=latest&&driver_number={number}")
+        return req[0].get("points_current")
+    except KeyError:
+        print("Not a valid driver number")
+        sys.exit()
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print(get_specific_driver_points(12))
+    print(get_specific_driver_points(9))
