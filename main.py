@@ -7,8 +7,12 @@ PREFIX = "https://api.openf1.org/v1/"
 
 # Sends the API request and turns the returned value into JSON
 def request_api(url: str):
-    req = requests.get(url)
-    return req.json()
+    try:
+        req = requests.get(url)
+        return req.json()
+    except requests.exceptions.ConnectionError:
+        print("Connection Error, Please check your internet connection")
+        sys.exit()
 
 
 # Gets the points of the given driver

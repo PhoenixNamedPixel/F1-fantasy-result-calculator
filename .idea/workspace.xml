@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Added an api request to get the driver's points">
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Added error handling in case of an invalid driver number being given">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
       <updated>1782210461267</updated>
       <workItem from="1782210462277" duration="2363000" />
       <workItem from="1782735812326" duration="104000" />
-      <workItem from="1782736495283" duration="2065000" />
+      <workItem from="1782736495283" duration="2937000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -95,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782738133519</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added error handling in case of an invalid driver number being given">
+      <option name="closed" value="true" />
+      <created>1782738850023</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1782738850023</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,7 +112,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Simple API request" />
     <MESSAGE value="Added an api request to get the driver's points" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added an api request to get the driver's points" />
+    <MESSAGE value="Added error handling in case of an invalid driver number being given" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added error handling in case of an invalid driver number being given" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
