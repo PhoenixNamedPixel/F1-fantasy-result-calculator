@@ -1,16 +1,30 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import sys
+import requests
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+PREFIX = "https://api.openf1.org/v1/"
+
+
+# Sends the API request and turns the returned value into JSON
+def request_api(url: str):
+    try:
+        req = requests.get(url)
+        return req.json()
+    except requests.exceptions.ConnectionError:
+        print("Connection Error, Please check your internet connection")
+        sys.exit()
+
+
+# Gets the points of the given driver
+def get_specific_driver_points(number: int) -> int:
+    try:
+        req = request_api(f"{PREFIX}championship_drivers?session_key=latest&&driver_number={number}")
+        return req[0].get("points_current")
+    except KeyError:
+        print("Not a valid driver number")
+        sys.exit()
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(get_specific_driver_points(9))
