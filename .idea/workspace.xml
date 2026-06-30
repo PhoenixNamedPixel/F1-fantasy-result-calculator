@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Added error handling in case of an invalid driver number being given">
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Added error handling in case of no internet connection or site unavailable">
+      <change afterPath="$PROJECT_DIR$/Teams.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -9,10 +10,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="Git.Settings">
+    <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="api_request" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,12 +27,22 @@
     &quot;assignee&quot;: &quot;PhoenixNamedPixel&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/PhoenixNamedPixel/F1-fantasy-result-calculator.git&quot;,
-    &quot;accountId&quot;: &quot;9fb02c87-f5d1-440d-954f-99073dd1f3b4&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/PhoenixNamedPixel/F1-fantasy-result-calculator.git",
+    "accountId": "9fb02c87-f5d1-440d-954f-99073dd1f3b4"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "PhoenixNamedPixel",
+    "repository": "F1-fantasy-result-calculator"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2,
   &quot;fromUser&quot;: false
@@ -44,11 +57,14 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "api__request",
+    "git-widget-placeholder": "Read-Teams",
+    "git.auto.fetch.suggestion.counter": "1",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,7 +84,7 @@
       <updated>1782210461267</updated>
       <workItem from="1782210462277" duration="2363000" />
       <workItem from="1782735812326" duration="104000" />
-      <workItem from="1782736495283" duration="2937000" />
+      <workItem from="1782736495283" duration="7802000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -102,31 +118,40 @@
       <option name="project" value="LOCAL" />
       <updated>1782738850023</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added error handling in case of no internet connection or site unavailable">
+      <option name="closed" value="true" />
+      <created>1782739632674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1782739632674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Simple API request" />
     <MESSAGE value="Added an api request to get the driver's points" />
     <MESSAGE value="Added error handling in case of an invalid driver number being given" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added error handling in case of an invalid driver number being given" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added error handling in case of no internet connection or site unavailable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added error handling in case of no internet connection or site unavailable" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1782738291032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1782739539891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
