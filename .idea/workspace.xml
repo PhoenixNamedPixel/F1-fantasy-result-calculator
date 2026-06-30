@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Added error handling in case of no internet connection or site unavailable">
-      <change afterPath="$PROJECT_DIR$/Teams.csv" afterDir="false" />
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Created csv file for inputting driver choices">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Teams.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <updated>1782210461267</updated>
       <workItem from="1782210462277" duration="2363000" />
       <workItem from="1782735812326" duration="104000" />
-      <workItem from="1782736495283" duration="7802000" />
+      <workItem from="1782736495283" duration="13902000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -126,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782739632674</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Created csv file for inputting driver choices">
+      <option name="closed" value="true" />
+      <created>1782827337306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1782827337306</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,9 +158,10 @@
     <MESSAGE value="Added an api request to get the driver's points" />
     <MESSAGE value="Added error handling in case of an invalid driver number being given" />
     <MESSAGE value="Added error handling in case of no internet connection or site unavailable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added error handling in case of no internet connection or site unavailable" />
+    <MESSAGE value="Created csv file for inputting driver choices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created csv file for inputting driver choices" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1782739539891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1782829427425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
