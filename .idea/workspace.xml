@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Created csv file for inputting driver choices">
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Created functions to read a csv file and read the Teams.csv file turning it into a useful structure&#10;Added comments and error handling if the Teams.csv file is missing">
+      <change afterPath="$PROJECT_DIR$/RaceNumbers.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Teams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Teams.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <updated>1782210461267</updated>
       <workItem from="1782210462277" duration="2363000" />
       <workItem from="1782735812326" duration="104000" />
-      <workItem from="1782736495283" duration="13902000" />
+      <workItem from="1782736495283" duration="15606000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -135,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782827337306</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created functions to read a csv file and read the Teams.csv file turning it into a useful structure&#10;Added comments and error handling if the Teams.csv file is missing">
+      <option name="closed" value="true" />
+      <created>1782829535686</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1782829535687</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,9 +167,10 @@
     <MESSAGE value="Added error handling in case of an invalid driver number being given" />
     <MESSAGE value="Added error handling in case of no internet connection or site unavailable" />
     <MESSAGE value="Created csv file for inputting driver choices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created csv file for inputting driver choices" />
+    <MESSAGE value="Created functions to read a csv file and read the Teams.csv file turning it into a useful structure&#10;Added comments and error handling if the Teams.csv file is missing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created functions to read a csv file and read the Teams.csv file turning it into a useful structure&#10;Added comments and error handling if the Teams.csv file is missing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1782829427425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1782829501807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
