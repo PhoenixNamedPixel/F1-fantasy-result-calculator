@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Made teams global with type annotations">
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Created function to calculate the results">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Teams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Teams.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +64,17 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "git.auto.fetch.suggestion.counter": "1",
+    "last_opened_file_path": "C:/Users/MatMe/PycharmProjects/F1-fantasy-result-calculator",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MatMe\PycharmProjects\F1-fantasy-result-calculator" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="F1 fantasy result calculator" />
@@ -223,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783333147755</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Created function to calculate the results">
+      <option name="closed" value="true" />
+      <created>1783333838906</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1783333838906</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +270,8 @@
     <MESSAGE value="Removed blank line in Teams.csv so the error comes up" />
     <MESSAGE value="Removed blank line in Teams.csv so the user is prompted to fill in the teams" />
     <MESSAGE value="Made teams global with type annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made teams global with type annotations" />
+    <MESSAGE value="Created function to calculate the results" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created function to calculate the results" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1783333712162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
