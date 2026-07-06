@@ -6,7 +6,8 @@ import requests
 
 
 PREFIX = "https://api.openf1.org/v1/"
-
+drivers_points: dict[int, int] = {}
+driver_numbers: dict[str, int] = {}
 
 # Sends the API request and turns the returned value into JSON
 def request_api(url: str):
@@ -18,11 +19,19 @@ def request_api(url: str):
         sys.exit()
 
 
+def get_all_drivers_points():
+    req = request_api(f"{PREFIX}championship_drivers?session_key=latest")
+    for driver in req:
+        drivers_points[driver.get("driver_number")] = driver.get("points_current")
+    return
+
 # Gets the points of the given driver
 def get_specific_driver_points(number: int) -> int:
+    if drivers_points == {}:
+        get_all_drivers_points()
     try:
-        req = request_api(f"{PREFIX}championship_drivers?session_key=latest&&driver_number={number}")
-        return req[0].get("points_current")
+        driver_points = drivers_points[number]
+        return driver_points
     except KeyError:
         print(f"{number} is not a valid driver number")
         sys.exit()
@@ -56,28 +65,18 @@ def get_teams():
         sys.exit()
 
 
-def get_driver_numbers() -> dict[str, int]:
+def get_driver_numbers():
     try:
         reader = read_csv("RaceNumbers.csv")
-        driver_numbers = {}
         headers = True
         for row in reader:
             if headers:
                 headers = False
                 continue
-            driver_numbers[row[0]] = row[1]
-        return driver_numbers
+            driver_numbers[row[0]] = int(row[1])
     except FileNotFoundError:
         print("RaceNumbers.csv not found, please get it from the git repo and try again")
         sys.exit()
-
-
-def get_driver_points():
-    driver_points = {}
-    driver_numbers = get_driver_numbers()
-    for driver in driver_numbers:
-        driver_points[driver] = get_specific_driver_points(driver_numbers[driver])
-    return driver_points
 
 
 def check_session_in_progress():
@@ -90,4 +89,5 @@ def check_session_in_progress():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     check_session_in_progress()
-    print(get_driver_points())
+    get_driver_numbers()
+    print(driver_numbers)
