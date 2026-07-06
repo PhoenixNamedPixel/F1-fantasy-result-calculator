@@ -8,6 +8,7 @@ import requests
 PREFIX = "https://api.openf1.org/v1/"
 drivers_points: dict[int, int] = {} # driver number, driver points
 driver_numbers: dict[str, int] = {} # driver name, driver number
+teams: dict[str, str] = {}
 
 # Sends the API request and turns the returned value into JSON
 def request_api(url: str):
@@ -50,7 +51,6 @@ def read_csv(filename: str):
 def get_teams():
     try:
         reader = read_csv("Teams.csv")
-        teams = {}
         headers = True
         for row in reader:
             if headers:
@@ -60,7 +60,6 @@ def get_teams():
         if teams == {}:
             print("Please fill in the teams within Teams.csv and run the program again")
             sys.exit()
-        return teams
     except FileNotFoundError:
         print("Teams.csv not found, please create and fill it first and try again")
         sys.exit()
@@ -92,5 +91,5 @@ def check_session_in_progress():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     check_session_in_progress()
-    get_driver_numbers()
-    print(driver_numbers)
+    get_teams()
+    print(teams)
