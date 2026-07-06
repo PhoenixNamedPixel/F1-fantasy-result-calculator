@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Created functions to get driver numbers and add their points&#10;Also added a function to check if a session is in progress as the api is pay-walled at during this time">
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="reduced the amount of requests sent to the api (was one for every driver, now its just one request)">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +14,7 @@
     <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="efficiency-increase" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,7 +60,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "efficiency-increase",
+    "git-widget-placeholder": "master",
     "git.auto.fetch.suggestion.counter": "1",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
@@ -150,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783331224821</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="reduced the amount of requests sent to the api (was one for every driver, now its just one request)">
+      <option name="closed" value="true" />
+      <created>1783332233019</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783332233019</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,9 +184,10 @@
     <MESSAGE value="Created csv file for inputting driver choices" />
     <MESSAGE value="Created functions to read a csv file and read the Teams.csv file turning it into a useful structure&#10;Added comments and error handling if the Teams.csv file is missing" />
     <MESSAGE value="Created functions to get driver numbers and add their points&#10;Also added a function to check if a session is in progress as the api is pay-walled at during this time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created functions to get driver numbers and add their points&#10;Also added a function to check if a session is in progress as the api is pay-walled at during this time" />
+    <MESSAGE value="reduced the amount of requests sent to the api (was one for every driver, now its just one request)" />
+    <option name="LAST_COMMIT_MESSAGE" value="reduced the amount of requests sent to the api (was one for every driver, now its just one request)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1783332001462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1783332064958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

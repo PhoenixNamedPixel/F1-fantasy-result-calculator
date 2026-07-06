@@ -6,8 +6,8 @@ import requests
 
 
 PREFIX = "https://api.openf1.org/v1/"
-drivers_points: dict[int, int] = {}
-driver_numbers: dict[str, int] = {}
+drivers_points: dict[int, int] = {} # driver number, driver points
+driver_numbers: dict[str, int] = {} # driver name, driver number
 
 # Sends the API request and turns the returned value into JSON
 def request_api(url: str):
@@ -19,13 +19,14 @@ def request_api(url: str):
         sys.exit()
 
 
+# Sends one request to get the latest results and sorts them into a dictionary for quick lookup later
 def get_all_drivers_points():
     req = request_api(f"{PREFIX}championship_drivers?session_key=latest")
     for driver in req:
         drivers_points[driver.get("driver_number")] = driver.get("points_current")
     return
 
-# Gets the points of the given driver
+# Gets the points of the given driver from the dictionary
 def get_specific_driver_points(number: int) -> int:
     if drivers_points == {}:
         get_all_drivers_points()
@@ -65,6 +66,7 @@ def get_teams():
         sys.exit()
 
 
+# Reads the RaceNumbers.csv file and puts it into the dictionary
 def get_driver_numbers():
     try:
         reader = read_csv("RaceNumbers.csv")
@@ -79,6 +81,7 @@ def get_driver_numbers():
         sys.exit()
 
 
+# Checks if the api is currently locked being a pay wall because a session is live
 def check_session_in_progress():
     request = request_api(PREFIX)
     if 'Live F1 session in progress. Global API access (including past sessions) is restricted to authenticated users until the session ends.' in request.get("detail"):
