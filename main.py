@@ -8,7 +8,7 @@ import requests
 PREFIX = "https://api.openf1.org/v1/"
 drivers_points: dict[int, int] = {} # driver number, driver points
 driver_numbers: dict[str, int] = {} # driver name, driver number
-teams: dict[str, str] = {}
+teams: dict[str, list[str]] = {} # Person, list of driver names
 
 # Sends the API request and turns the returned value into JSON
 def request_api(url: str):
@@ -88,8 +88,26 @@ def check_session_in_progress():
         sys.exit()
     return
 
+
+def calculate_results():
+    results: list[tuple[str, int]] = []
+    if driver_numbers == {}:
+        get_driver_numbers()
+    if drivers_points == {}:
+        get_all_drivers_points()
+    if teams == {}:
+        get_teams()
+    for team in teams:
+        score = 0
+        for driver in teams[team]:
+            score += drivers_points[driver_numbers[driver]]
+        results.append((team, score))
+    results.sort(key=lambda x: x[1], reverse=True)
+    return results
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     check_session_in_progress()
-    get_teams()
-    print(teams)
+    final = calculate_results()
+    for team in final:
+        print(f"{team[0]}: {team[1]}")
