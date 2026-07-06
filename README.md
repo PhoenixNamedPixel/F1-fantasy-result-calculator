@@ -12,5 +12,5 @@ Just fill in your teams within the Teams.csv file and run the program.
 The results will be output in the terminal in position order.
 
 ## Acknowledgments
-All data retrieved from [OpenF1](openf1.org). Many thanks for this free 
+All data retrieved from [OpenF1](https://openf1.org). Many thanks for this free 
 service they provide.
