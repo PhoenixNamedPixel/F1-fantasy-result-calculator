@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Removed blank line in Teams.csv so the user is prompted to fill in the teams">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="36173479-86da-4dab-b4b2-5f0eb17d02e9" name="Changes" comment="Made teams global with type annotations">
       <change beforePath="$PROJECT_DIR$/Teams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Teams.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -216,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783332897344</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Made teams global with type annotations">
+      <option name="closed" value="true" />
+      <created>1783333147755</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1783333147755</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,9 +254,10 @@
     <MESSAGE value="Removed blank line in Teams.csv so the message to fill it in comes up" />
     <MESSAGE value="Removed blank line in Teams.csv so the error comes up" />
     <MESSAGE value="Removed blank line in Teams.csv so the user is prompted to fill in the teams" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed blank line in Teams.csv so the user is prompted to fill in the teams" />
+    <MESSAGE value="Made teams global with type annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made teams global with type annotations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1783333054099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/F1_fantasy_result_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1783333712162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
