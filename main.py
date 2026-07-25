@@ -1,6 +1,6 @@
 import csv
+from datetime import datetime, timezone
 import sys
-from sys import prefix
 
 import requests
 
@@ -105,9 +105,25 @@ def calculate_results():
     results.sort(key=lambda x: x[1], reverse=True)
     return results
 
+
+def get_previous_meeting_key():
+    url = f"{PREFIX}sessions?session_type=Race&&meeting_key="
+    #latest = request_api(f"{url}latest")
+    latest = [{"session_key":11342,"session_type":"Race","session_name":"Race","date_start":"2026-07-26T13:00:00+00:00","date_end":"2026-07-26T15:00:00+00:00","meeting_key":1291,"circuit_key":4,"circuit_short_name":"Hungaroring","country_key":14,"country_code":"HUN","country_name":"Hungary","location":"Budapest","gmt_offset":"02:00:00","year":2026,"is_cancelled":False}]
+    is_sprint_weekend = False if len(latest) == 1 else True
+    now = datetime.now(timezone.utc)
+    end = datetime.fromisoformat(latest[0]["date_end"])
+    if end > now:
+        meeting = int(latest[0]["meeting_key"]) - 1
+        previous_meeting = request_api(f"{url}{meeting}")
+    else:
+        pass
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    check_session_in_progress()
-    final = calculate_results()
-    for team in final:
-        print(f"{team[0]}: {team[1]}")
+    # check_session_in_progress()
+    # final = calculate_results()
+    # for team in final:
+    #     print(f"{team[0]}: {team[1]}")
+    get_previous_meeting_key()
