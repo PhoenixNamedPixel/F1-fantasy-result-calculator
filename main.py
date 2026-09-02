@@ -22,7 +22,8 @@ def request_api(url: str):
 
 # Sends one request to get the latest results and sorts them into a dictionary for quick lookup later
 def get_all_drivers_points():
-    req = request_api(f"{PREFIX}championship_drivers?session_key=latest")
+    key = get_previous_race().get("session_key")
+    req = request_api(f"{PREFIX}championship_drivers?session_key={key}")
     for driver in req:
         drivers_points[driver.get("driver_number")] = driver.get("points_current")
     return
@@ -106,24 +107,29 @@ def calculate_results():
     return results
 
 
-def get_previous_meeting_key():
-    url = f"{PREFIX}sessions?session_type=Race&&meeting_key="
-    #latest = request_api(f"{url}latest")
-    latest = [{"session_key":11342,"session_type":"Race","session_name":"Race","date_start":"2026-07-26T13:00:00+00:00","date_end":"2026-07-26T15:00:00+00:00","meeting_key":1291,"circuit_key":4,"circuit_short_name":"Hungaroring","country_key":14,"country_code":"HUN","country_name":"Hungary","location":"Budapest","gmt_offset":"02:00:00","year":2026,"is_cancelled":False}]
-    is_sprint_weekend = False if len(latest) == 1 else True
-    now = datetime.now(timezone.utc)
-    end = datetime.fromisoformat(latest[0]["date_end"])
-    if end > now:
-        meeting = int(latest[0]["meeting_key"]) - 1
-        previous_meeting = request_api(f"{url}{meeting}")
-    else:
-        pass
+def get_previous_race():
+    year = datetime.now().year
+    url = f"{PREFIX}sessions?session_type=Race&Year={year}"
+    races = request_api(url)
+    amount_of_races = len(races)
+    now = datetime.now(tz=timezone.utc)
 
+    l = 0
+    r = amount_of_races - 1
+
+    while l <= r:
+        m = l + int((r-l)/2)
+        if datetime.fromisoformat(races[m].get("date_end")) < now < datetime.fromisoformat(races[m + 1].get("date_end")):
+            return races[m]
+        elif datetime.fromisoformat(races[m].get("date_end")) < now:
+            l = m + 1
+        else:
+            r = m - 1
+    raise ValueError("No championship points found")
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # check_session_in_progress()
-    # final = calculate_results()
-    # for team in final:
-    #     print(f"{team[0]}: {team[1]}")
-    get_previous_meeting_key()
+    check_session_in_progress()
+    final = calculate_results()
+    for team in final:
+        print(f"{team[0]}: {team[1]}")
