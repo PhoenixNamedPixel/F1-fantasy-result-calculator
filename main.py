@@ -44,7 +44,11 @@ def get_specific_driver_points(number: int) -> int:
 def read_csv(filename: str):
     with open(filename, "r") as csvfile:
         reader = csv.reader(csvfile)
+        headers = True
         for row in reader:
+            if headers:
+                headers = False
+                continue
             yield row
 
 
@@ -52,11 +56,7 @@ def read_csv(filename: str):
 def get_teams():
     try:
         reader = read_csv("Teams.csv")
-        headers = True
         for row in reader:
-            if headers:
-                headers = False
-                continue
             teams[row[0]] = row[1:]
         if teams == {}:
             print("Please fill in the teams within Teams.csv and run the program again")
@@ -70,11 +70,7 @@ def get_teams():
 def get_driver_numbers():
     try:
         reader = read_csv("RaceNumbers.csv")
-        headers = True
         for row in reader:
-            if headers:
-                headers = False
-                continue
             driver_numbers[row[0]] = int(row[1])
     except FileNotFoundError:
         print("RaceNumbers.csv not found, please get it from the git repo and try again")
@@ -98,6 +94,7 @@ def calculate_results():
         get_all_drivers_points()
     if teams == {}:
         get_teams()
+    manual_points_adjust()
     for team in teams:
         score = 0
         for driver in teams[team]:
@@ -126,6 +123,12 @@ def get_previous_race():
         else:
             r = m - 1
     raise ValueError("No championship points found")
+
+def manual_points_adjust():
+    file = "ManualPointsAlterations.csv"
+    data = read_csv(file)
+    for row in data:
+        drivers_points[driver_numbers[row[0]]] += int(row[1])
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
